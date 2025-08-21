@@ -1,1 +1,0 @@
-Place your optimized assets here (images, videos, logos, etc.).
