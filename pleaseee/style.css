@@ -1,0 +1,13 @@
+/* style.css */
+
+body { margin:0; font-family:Arial, sans-serif; overflow-x:hidden; }
+header { display:flex; justify-content:space-between; align-items:center; padding:2rem; background:#111; color:#fff; position:sticky; top:0; transition:all 0.5s ease; }
+header.shrink { padding:1rem; opacity:0.5; }
+.logo { font-size:4rem; transition:all 0.5s ease; }
+header.shrink .logo { font-size:2rem; opacity:0.5; }
+.slide { min-height:100vh; display:flex; justify-content:center; align-items:center; font-size:2rem; }
+.puppy-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+.puppy-grid img { width:100%; cursor:pointer; }
+#preloader { position:fixed; top:0; left:0; width:100%; height:100%; background:#000; display:flex; justify-content:center; align-items:center; flex-direction:column; z-index:9999; }
+#skip { position:absolute; top:20px; right:20px; font-size:2rem; color:#fff; cursor:pointer; background:transparent; }
+#deposit-badge { color:#fff; background:red; padding:10px; margin-top:20px; font-weight:bold; }
