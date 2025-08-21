@@ -1,70 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LEAGUEOFBULLIES SEASON 1</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>League of Bullies — Premium Bully Breeding</title>
+  <link rel="preload" href="assets/logo1.png" as="image">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Preloader -->
-  <div id="preloader">
-    <video autoplay muted playsinline id="preloader-video">
-      <source src="../assets/EXODUS_X_ASIA_UPCOMING_BREEDING.mov" type="video/mp4">
+  <!-- Preloader: first visit only -->
+  <div id="preloader" class="preloader hidden">
+    <video id="preVid" playsinline muted autoplay>
+      <source src="assets/preloader.mov" type="video/quicktime">
+      Your browser doesn't support the video tag.
     </video>
-    <div id="skip">SKIP</div>
-    <div id="deposit-badge">ACCEPTING DEPOSITS</div>
+    <a href="#home" id="depositBanner" class="deposit-banner">ACCEPTING DEPOSITS</a>
+    <button id="skipBtn" class="skip-btn">SKIP</button>
   </div>
 
-  <!-- Header -->
-  <header id="site-header" class="sticky">
-    <div class="logo">LOGO HERE</div>
-    <div class="header-info">
-      <a href="https://instagram.com/leagueofbullies" target="_blank">@leagueofbullies</a>
-      <a href="https://instagram.com/33" target="_blank">@33</a>
-      <span>(347) 720-3314</span>
-      <span>(973) 519-4175</span>
+  <header class="site-header">
+    <div class="logo-wrap">
+      <img src="assets/logo1.png" class="logo" alt="League of Bullies">
+      <div class="tagline">Premium Bully Breeding</div>
+    </div>
+    <div class="contact-right">
+      <span class="ig">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2A2.8 2.8 0 1 0 12 15.8 2.8 2.8 0 0 0 12 9.2zM18 6.5a1 1 0 1 1 0 2.001 1 1 0 0 1 0-2.001z"/></svg>
+        <a href="https://instagram.com/leagueofbullies" target="_blank" rel="noopener">@leagueofbullies</a>
+      </span>
+      <span class="ig">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2A2.8 2.8 0 1 0 12 15.8 2.8 2.8 0 0 0 12 9.2zM18 6.5a1 1 0 1 1 0 2.001 1 1 0 0 1 0-2.001z"/></svg>
+        <a href="https://instagram.com/33" target="_blank" rel="noopener">@33</a>
+      </span>
+      <span class="phone"><a href="tel:13477203314">(347) 720-3314</a></span>
+      <span class="phone"><a href="tel:19735194175">(973) 519-4175</a></span>
+      <span class="email"><a href="mailto:leagueofbullies@gmail.com">leagueofbullies@gmail.com</a></span>
     </div>
   </header>
 
-  <!-- Slider -->
-  <main id="slider">
-    <section class="slide hero">Hero Section</section>
-    <section class="slide pack">
-      <h2>OUR PACK</h2>
-      <div class="dog">Jax - <a href="stud.html">Open</a></div>
-      <div class="dog">Asia</div>
-      <div class="dog">Capone</div>
-      <div class="dog">Ms. Europe</div>
+  <!-- Slider container -->
+  <div id="slider" class="slider" tabindex="0">
+    <!-- Slide 1: Hero -->
+    <section class="slide" id="home">
+      <div class="hero">
+        <img src="assets/UPCOMING_BREEDING_ASIA_X_EXODUS.jpg" alt="Upcoming Breeding Asia x Exodus" class="hero-img">
+      </div>
+      <button class="arrow prev" aria-label="Previous slide">‹</button>
+      <button class="arrow next" aria-label="Next slide">›</button>
     </section>
-    <section class="slide breeding">
-      <h2>Upcoming Breedings</h2>
-      <p>Asia × Exodus</p>
-      <a href="mailto:leagueofbullies@gmail.com">Email</a>
-      <a href="https://instagram.com/leagueofbullies" target="_blank">Instagram</a>
-      <a href="https://cash.app/$Teooooooo" target="_blank">CashApp $500 Reservation</a>
+
+    <!-- Slide 2: Studs -->
+    <section class="slide" id="studs">
+      <h2 class="section-title">Featured Dogs</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="assets/JAX.png" alt="Jax">
+          <div class="card-body">
+            <h3>Jax</h3>
+            <p>Male • 115 lbs • 21 in • Lilac Tri / Champagne Tri</p>
+            <p>DOB: May 14, 2022</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/ASIA.png" alt="Asia">
+          <div class="card-body">
+            <h3>Asia</h3>
+            <p>Female • 105 lbs • 20.5 in • Lilac Tri / Champagne Tri</p>
+            <p>DOB: June 22, 2023</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/CAPONE1.png" alt="Capone">
+          <div class="card-body">
+            <h3>Capone</h3>
+            <p>Male • 80 lbs • Lilac Tri / Champagne Tri</p>
+            <p>DOB: February 10, 2025</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/MS.EUROPE.png" alt="Ms. Europe">
+          <div class="card-body">
+            <h3>Ms. Europe</h3>
+            <p>Female • 75 lbs • Lilac Tri / Champagne Tri</p>
+            <p>DOB: February 10, 2025</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/UPCOMING_BREEDING_ASIA_X_EXODUS.jpg" alt="Exodus">
+          <div class="card-body">
+            <h3>Exodus (Chocolate Tri)</h3>
+            <p>Male • 135+ lbs • 2 years • Owned by Level Up Bullies</p>
+            <p><a href="https://instagram.com/levelupbullies416" target="_blank" rel="noopener">@levelupbullies416</a></p>
+          </div>
+        </article>
+      </div>
+      <button class="arrow prev" aria-label="Previous slide">‹</button>
+      <button class="arrow next" aria-label="Next slide">›</button>
     </section>
-  </main>
 
-  <!-- Puppies Page -->
-  <section id="puppies">
-    <h2>Puppies</h2>
-    <div class="puppy-grid">
-      <img src="../assets/puppies1.jpg" alt="puppy1">
-      <img src="../assets/puppies2.png" alt="puppy2">
-      <img src="../assets/puppies3.jpg" alt="puppy3">
-    </div>
-  </section>
+    <!-- Slide 3: Upcoming Breedings -->
+    <section class="slide" id="upcoming">
+      <h2 class="section-title center bold">UPCOMING BREEDINGS</h2>
+      <div class="center">
+        <img src="assets/UPCOMING_BREEDING_ASIA_X_EXODUS.jpg" alt="Asia × Exodus" class="banner">
+        <p class="muted">Asia × Exodus — Inquiries Open</p>
+      </div>
+      <button class="arrow prev" aria-label="Previous slide">‹</button>
+      <button class="arrow next" aria-label="Next slide">›</button>
+    </section>
 
-  <!-- Jax Stud Page -->
-  <section id="stud">
-    <h2>Stud: Jax</h2>
-    <img src="../assets/JAX.png" alt="Jax">
-    <p>Stud fee: $1000 — Open for reservation</p>
-    <a href="https://cash.app/$Teooooooo" target="_blank">CashApp</a>
-    <a href="mailto:TeoVel@icloud.com">Zelle: TeoVel@icloud.com</a>
-  </section>
+    <!-- Slide 4: Puppies -->
+    <section class="slide" id="puppies">
+      <h2 class="section-title center bold">LEAGUEOFBULLIES SEASON 1</h2>
+      <div class="puppy-grid">
+        <img src="assets/puppies1.jpg" class="puppy" alt="Puppy 1">
+        <img src="assets/puppies2.png" class="puppy" alt="Puppy 2">
+        <img src="assets/puppies3.jpg" class="puppy" alt="Puppy 3">
+      </div>
+      <div id="lightbox" class="lightbox hidden">
+        <button class="lightbox-close" aria-label="Close">×</button>
+        <button class="lightbox-prev" aria-label="Previous">‹</button>
+        <img id="lightbox-img" alt="Puppy large">
+        <button class="lightbox-next" aria-label="Next">›</button>
+      </div>
+      <button class="arrow prev" aria-label="Previous slide">‹</button>
+      <button class="arrow next" aria-label="Next slide">›</button>
+    </section>
 
-  <script src="../js/script.js"></script>
+    <!-- Slide 5: Inquiry -->
+    <section class="slide" id="inquiry">
+      <h2 class="section-title center bold">Reserve a Puppy</h2>
+      <p class="center">Reservation Fee: <strong>$500</strong></p>
+
+      <div class="payments">
+        <div class="pay-card">
+          <img src="assets/cashapp_qr.png" alt="CashApp $500 QR" class="qr">
+          <a class="btn cashapp" href="https://cash.app/$Teooooooo/500" target="_blank" rel="noopener">Reserve Puppy – $500 (CashApp)</a>
+          <p class="muted">$Teooooooo</p>
+        </div>
+        <div class="pay-card">
+          <div class="zelle-logo">Zelle</div>
+          <a class="btn zelle" href="mailto:TeoVel@icloud.com?subject=League%20of%20Bullies%20Puppy%20Reservation&body=I%20would%20like%20to%20reserve%20a%20puppy%20(%24500%20deposit)%20via%20Zelle." target="_blank" rel="noopener">Pay with Zelle – $500</a>
+          <p class="muted">Send via Zelle to: <strong>TeoVel@icloud.com</strong></p>
+        </div>
+      </div>
+      <form class="inquiry-form" action="mailto:leagueofbullies@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn">Send Inquiry</button>
+      </form>
+      <button class="arrow prev" aria-label="Previous slide">‹</button>
+      <button class="arrow next" aria-label="Next slide">›</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
